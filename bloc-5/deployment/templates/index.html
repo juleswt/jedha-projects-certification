@@ -2,7 +2,7 @@
 {% block content %}
 <div>
   
-  <img scr="https://raw.githubusercontent.com/juleswt/ml-in-production/main/images/wine.png" alt="Red Wine Logo" width="200">
+  <img scr="https://raw.githubusercontent.com/juleswt/jedha-projects-certification/main/bloc-5/deployment/images/wine.png" alt="Red Wine Logo" width="200">
   <h1>API Documentation</h1>
   <p>Welcome to the API documentation for our wine quality score prediction based on physicochemical inputs.</p>
   
@@ -15,7 +15,7 @@
     <br><h2>How to request this endpoint?</h2>
     <p>You should request this endpoint using a POST method with a JSON content.</p>
     <p>Your JSON should contain at least "input" key with associated value (list of float).</p>
-    <p>Example: <br><code>curl -i -H "Content-Type: application/json" -X POST -d '{"input": [[7.0, 0.27, 0.36, 20.7, 0.045, 45.0, 170.0, 1.001, 3.0, 0.45, 8.8]]}' https://mlinproduction.herokuapp.com/predict</code></p>
+    <p>Example: <br><code>curl -i -H "Content-Type: application/json" -X POST -d '{"input": [[7.0, 0.27, 0.36, 20.7, 0.045, 45.0, 170.0, 1.001, 3.0, 0.45, 8.8]]}' https://deployment-jwa.herokuapp.com/predict</code></p>
     
     <p>
       It returns a JSON like so:
@@ -27,7 +27,7 @@
     </p>
     
     <p>You can add several list of physicochemical inputs in order to get quality score of multiple wines.</p>
-    <p>Example: <br><code>curl -i -H "Content-Type: application/json" -X POST -d '{"input": [[7.0, 0.27, 0.36, 20.7, 0.045, 45.0, 170.0, 1.001, 3.0, 0.45, 8.8],[5.0, 0.98, 0.32, 18.9, 0.050, 75.0, 122.0, 0.401, 3.1, 0.21, 1.2]]}' https://mlinproduction.herokuapp.com/predict</code></p>
+    <p>Example: <br><code>curl -i -H "Content-Type: application/json" -X POST -d '{"input": [[7.0, 0.27, 0.36, 20.7, 0.045, 45.0, 170.0, 1.001, 3.0, 0.45, 8.8],[5.0, 0.98, 0.32, 18.9, 0.050, 75.0, 122.0, 0.401, 3.1, 0.21, 1.2]]}' https://deployment-jwa.herokuapp.com/predict</code></p>
     
     <p>
       It returns a JSON like so:
