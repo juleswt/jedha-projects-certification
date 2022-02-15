@@ -1,0 +1,132 @@
+{% extends "layout.html" %}
+{% block content %}
+<div>
+  
+  <img scr="https://raw.githubusercontent.com/juleswt/ml-in-production/main/images/wine.png" alt="Red Wine Logo" width="200">
+  <h1>API Documentation</h1>
+  <p>Welcome to the API documentation for our wine quality score prediction based on physicochemical inputs.</p>
+  
+  <div>
+
+    <br><h2>Endpoints</h2>
+    <h3><code><i>POST/prediction</i></code></h3>
+    <p>This endpoint allows you to make a prediction of wine quality score (from 0 to 10) of one or multiple wines.</p>
+    
+    <br><h2>How to request this endpoint?</h2>
+    <p>You should request this endpoint using a POST method with a JSON content.</p>
+    <p>Your JSON should contain at least "input" key with associated value (list of float).</p>
+    <p>Example: <br><code>curl -i -H "Content-Type: application/json" -X POST -d '{"input": [[7.0, 0.27, 0.36, 20.7, 0.045, 45.0, 170.0, 1.001, 3.0, 0.45, 8.8]]}' https://mlinproduction.herokuapp.com/predict</code></p>
+    
+    <p>
+      It returns a JSON like so:
+      <pre><code>
+        {
+          'quality': [6]
+        }
+      </code></pre>
+    </p>
+    
+    <p>You can add several list of physicochemical inputs in order to get quality score of multiple wines.</p>
+    <p>Example: <br><code>curl -i -H "Content-Type: application/json" -X POST -d '{"input": [[7.0, 0.27, 0.36, 20.7, 0.045, 45.0, 170.0, 1.001, 3.0, 0.45, 8.8],[5.0, 0.98, 0.32, 18.9, 0.050, 75.0, 122.0, 0.401, 3.1, 0.21, 1.2]]}' https://mlinproduction.herokuapp.com/predict</code></p>
+    
+    <p>
+      It returns a JSON like so:
+      <pre><code>
+        {
+          'quality': [6, 5]
+        }
+      </code></pre>
+    </p>
+    
+    <br><h2>Errors</h2>
+    <p>
+      Our API will return an error with format:
+      <pre><code>
+        {
+          "code": <i>HTTP status code</i>,
+          "name": <i>name of this error</i>,
+          "description": <i>a short description</i>
+        }
+      </code></pre>
+    </p>
+    
+    <p>
+      Identified errors:
+      <ul>
+        <li>Missing JSON</li>
+        <li>Missing key "input"</li>
+      </ul>
+    </p>
+    
+    <br><h2>Download file</h2>
+    <p>If you prefer to run the query through a python file, you can click on the following link to download a python file:</p>
+    
+    <p>
+      <ul>
+        <li><a href="{{url_for('download_simple_input')}}">Simple Input</a></li>
+        <li><a href="{{url_for('download_multiple_input')}}">Multiple Input</a></li>
+      </ul>
+    </p>
+    
+    <table id="physicochemical">
+      <caption>Physicochemical inputs</caption>
+      <tr>
+        <td>fixed acidity</td>
+        <td>7.0</td>
+      </tr>
+      <tr>
+        <td>volatile acidity</td>
+        <td>0.27</td>
+      </tr>
+      <tr>
+        <td>citric acid</td>
+        <td>0.36</td>
+      </tr>
+      <tr>
+        <td>residual sugar</td>
+        <td>20.7</td>
+      </tr>
+      <tr>
+        <td>chlorides</td>
+        <td>0.045</td>
+      </tr>
+      <tr>
+        <td>free sulfur dioxide</td>
+        <td>45.0</td>
+      </tr>
+      <tr>
+        <td>total sulfur dioxide</td>
+        <td>170.0</td>
+      </tr>
+      <tr>
+        <td>density</td>
+        <td>1.001</td>
+      </tr>
+      <tr>
+        <td>pH</td>
+        <td>3.0</td>
+      </tr>
+      <tr>
+        <td>sulphates</td>
+        <td>0.45</td>
+      </tr>
+      <tr>
+        <td>alcohol</td>
+        <td>8.8</td>
+      </tr>
+    </table>
+    
+    <br><h2>Prediction Exemple</h2>
+    <p>You can also copy/paste a list of float in the following input field to display the quality score on the interface (only works with one list of float).<br>7.0, 0.27, 0.36, 20.7, 0.045, 45.0, 170.0, 1.001, 3.0, 0.45, 8.8</p>
+    
+    <form action="predictAI" method="POST">
+      {% for message in get_flashed_messages()%}
+        <p>{{message}}</p>
+      {% endfor %}
+      <input type="text" name="list_float">
+      <input type="submit" value="PREDICT" id="predictAI">
+    </form>
+  
+  </div>
+</div>
+{% endblock %}
