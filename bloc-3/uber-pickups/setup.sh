@@ -1,9 +1,15 @@
-mkdir -p ~/bloc-3/uber-pickups/.streamlit/
+mkdir -p ~/.streamlit/
 
 echo "\
+[theme]\n\
+primaryColor='#d33682'\n\
+backgroundColor='#002b36'\n\
+secondaryBackgroundColor='#586e75'\n\
+textColor='#fafafa'\n\
+font='sans serif'\n\
 [server]\n\
 port = $PORT\n\
 enableCORS = false\n\
 headless = true\n\
 \n\
-" > ~/bloc-3/uber-pickups/.streamlit/config.toml
+" > ~/.streamlit/config.toml
