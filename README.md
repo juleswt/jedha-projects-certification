@@ -12,7 +12,7 @@
     * projet Walmart Sales
     * projet Convertion Rate Challenge<br></br>
     * projet Uber Pickups<br></br>
-    [![Streamlit](https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Streamlit-logo-primary-colormark-darktext.png/140px-Streamlit-logo-primary-colormark-darktext.png)](https://share.streamlit.io/juleswt/jedha-projects-certification/main/bloc-3/uber-pickups/app.py)<br></br>
+    [![Heroku](https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Heroku_logo.svg/120px-Heroku_logo.svg.png)](https://uber-pickups-jwa.herokuapp.com/)<br></br>
 
 - Bloc 4 : Analyse prédictive de données non-structurées par l'intelligence artificielle
     * projet Disaster Tweets<br></br>

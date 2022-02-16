@@ -43,8 +43,8 @@ if "cluster_number" not in st.session_state:
 
 # dataset & model defintion
 def build_df(file, year, month, hour):
-    # df = pd.read_csv("src/" + file)
-    df = pd.read_csv("bloc-3/uber-pickups/src/" + file)
+    df = pd.read_csv("src/" + file)
+    # df = pd.read_csv("bloc-3/uber-pickups/src/" + file)
     
     df["Date/Time"] = pd.to_datetime(df["Date/Time"], format="%m/%d/%Y %H:%M:%S")
     df = df.loc[df["Date/Time"].dt.year == year, :]
