@@ -12,7 +12,7 @@
     * projet Walmart Sales
     * projet Convertion Rate Challenge<br></br>
     * projet Uber Pickups<br></br>
-    [![Heroku](https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Heroku_logo.svg/120px-Heroku_logo.svg.png)](https://uber-pickups-jwa.herokuapp.com/)<br></br>
+    [![Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/juleswt/uber-pickups-app/main/app.py)<br></br>
 
 - Bloc 4 : Analyse prédictive de données non-structurées par l'intelligence artificielle
     * projet Disaster Tweets<br></br>
@@ -22,4 +22,5 @@
     [![Heroku](https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Heroku_logo.svg/120px-Heroku_logo.svg.png)](https://deployment-jwa.herokuapp.com/)<br></br>
 
 - Bloc 6 : Direction de projets de gestion de données
-    * projet Foot Prophet
+    * projet Foot Prophet<br></br>
+    [![Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/juleswt/foot-prophet-app/main/app.py)

@@ -9,7 +9,7 @@ textColor='#fafafa'\n\
 font='sans serif'\n\
 [server]\n\
 port = $PORT\n\
-enableCORS = false\n\
 headless = true\n\
+enableCORS = false\n\
 \n\
 " > ~/.streamlit/config.toml
