@@ -2,7 +2,6 @@ import csv
 import datetime
 from functools import reduce
 
-
 class Dataset:
     def __init__(self, file_path):
         self.raw_results = []
@@ -50,7 +49,6 @@ class Dataset:
                 print(f"Processing results, Unexpected {err=}, {type(err)=}"+':'+file_path)
                 print('Error in line :', count, result)
                 break
-    
 
     # Filter results to only contain matches played in by a given team, before a given date
     def filter(self, team, date):
